@@ -235,7 +235,8 @@ class Ecat:
         # Siemens model best guess
         self.sidecar_template['ManufacturersModelName'] = self.ecat_header.get('SERIAL_NUMBER', None)
         self.sidecar_template['TracerRadionuclide'] = self.ecat_header.get('ISOTOPE_NAME', None)
-        self.sidecar_template['PharmaceuticalName'] = self.ecat_header.get('RADIOPHARAMCEUTICAL', None)
+        self.sidecar_template['TracerRadionuclideHalflife'] = self.ecat_header.get('ISOTOPE_HALFLIFE', None)
+        self.sidecar_template['PharmaceuticalName'] = self.ecat_header.get('RADIOPHARMACEUTICAL', None)
 
         # collect frame time start and populate various subheader fields
         for subheader in self.subheaders:
