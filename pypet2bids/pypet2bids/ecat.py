@@ -237,6 +237,7 @@ class Ecat:
         self.sidecar_template['TracerRadionuclide'] = self.ecat_header.get('ISOTOPE_NAME', None)
         self.sidecar_template['TracerRadionuclideHalflife'] = self.ecat_header.get('ISOTOPE_HALFLIFE', None)
         self.sidecar_template['PharmaceuticalName'] = self.ecat_header.get('RADIOPHARMACEUTICAL', None)
+        self.sidecar_template['Units'] = self.ecat_header.get('DATA_UNITS', None)
 
         # collect frame time start and populate various subheader fields
         for subheader in self.subheaders:
